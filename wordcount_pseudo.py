@@ -8,7 +8,7 @@ let wordcount_map(file, firstyear, lastyear)
 // how do i loop through map phase?  I dont think i can this has to handled some other way i think
 
 // does having this many partitions/reducers cause problems?problems
-let max_min_wc_partitioner(<year, word>, first_year, last_year)
+let max_min_wc_partitioner(<year, [word, count]>, first_year, last_year)
   partition = 0
   partition_hashmap = new hashmap
   for year from first_year to last_year:
