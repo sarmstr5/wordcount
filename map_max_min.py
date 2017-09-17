@@ -17,7 +17,6 @@ doc_count = 0
 
 for doc in sys.stdin:
     data = doc.split()
-    print(data)
     for line in data:
         words = line.split()
         for word in words:
