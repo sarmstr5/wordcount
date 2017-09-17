@@ -17,9 +17,9 @@ for line in sys.stdin:
   # found new key, emit current count
   if last_key and current_key != last_key:
     print(current_key+'\t'+total)
-    last_key = current_key
-    count += 1
+    current_key = last_key
     sum = org_count
+    count += 1
 
   # increment count
   else:
