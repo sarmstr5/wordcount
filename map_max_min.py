@@ -23,14 +23,13 @@ for doc in sys.stdin:
             # to save network traffic
             word_dict[word] += 1
 
+    # want the words to be sorted by year for the reducer
     for word in sorted(word_dict.iterkeys()):
-        # want the words to be sorted by year for the reducer
         print('{}\t{}\t{}'.format(doc_count, word, word_dict[word]))
 
-#    for word, count in sorted(word_dict.items():
-        # want the words to be sorted by year for the reducer
-#        print('{}\t{}\t{}'.format(doc_count, word, count))
+    # want the words to be sorted by year for the reducer
+#   for word, count in sorted(word_dict.items()):
+#       print('{}\t{}\t{}'.format(doc_count, word, count))
     word_dict = defaultdict(int)
-        
     doc_count += 1
 

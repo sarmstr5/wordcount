@@ -10,7 +10,6 @@ current_doc = None
 # input from STDIN
 # expecting a doc number, word from document, and count for that word
 for line in sys.stdin:
-#    print(line)
 
     doc_num, word, count = line.split('\t')
 
@@ -24,7 +23,6 @@ for line in sys.stdin:
     # append word counts for that document to master word count dictionary 
     # create new doc dictionary to restart word count
     if current_doc and (current_doc != doc_num):
-#        print('found new document')
         for word, count in doc_counts.iteritems():
             all_counts[word].append(count)
         doc_counts = defaultdict(int)
@@ -33,13 +31,13 @@ for line in sys.stdin:
     # same document continue incrementing document word counts
     else:
         current_doc = doc_num
-#        print('incrementing doc word count')
         doc_counts[word] += count
 
-print('out of for loop')
 # went through all mapped items
-for word, counts in all_counts.iteritems():
-    max_wc = max(counts)
-    min_wc = min(counts)
-    print('{}\t{}\t{}'.format(word, min_wc, max_wc))
-    
+try:
+    for word, counts in all_counts.iteritems():
+        max_wc = max(counts)
+        min_wc = min(counts)
+        print('{}\t{}\t{}'.format(word, min_wc, max_wc))
+except:
+    print(Exception)
