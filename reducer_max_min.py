@@ -40,4 +40,4 @@ try:
         min_wc = min(counts)
         print('{}\t{}\t{}'.format(word, min_wc, max_wc))
 except:
-    print(Exception)
+    continue
