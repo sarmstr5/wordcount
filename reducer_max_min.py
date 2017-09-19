@@ -34,10 +34,7 @@ for line in sys.stdin:
         doc_counts[word] += count
 
 # went through all mapped items
-try:
-    for word, counts in all_counts.iteritems():
-        max_wc = max(counts)
-        min_wc = min(counts)
-        print('{}\t{}\t{}'.format(word, min_wc, max_wc))
-except:
-    continue
+for word, counts in all_counts.iteritems():
+    max_wc = max(counts)
+    min_wc = min(counts)
+    print('{}\t{}\t{}'.format(word, min_wc, max_wc))
