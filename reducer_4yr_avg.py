@@ -32,7 +32,7 @@ for line in sys.stdin:
     try:
         counts = ast.literal_eval(counts)
         # do i need to error test this?
-        [int(i) for i in counts]
+        counts = [int(i) for i in counts]
         term_partition = int(term_partition)
     except ValueError:
         continue

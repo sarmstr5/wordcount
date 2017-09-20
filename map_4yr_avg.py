@@ -24,6 +24,7 @@ for doc in sys.stdin:
 
     # want the words to be sorted by partition for the reducer
     # sorted words for validation purposes but not needed
+    # should this if be first?
     if term_year == term_window:
         print('in if loop')
         for word in sorted(word_dict.iterkeys()):
@@ -31,11 +32,11 @@ for doc in sys.stdin:
             if word_dict[word][term_window] == 0:
               del word_dict[word]
             else:
+              # shift count from index 4 to 0
               word_dict[word] = [word_dict[word][term_window], 0, 0, 0, 0]
         term_year = 0
         year_partition += 1
     else:
-        print('year count ++')
         term_year += 1
 
 
