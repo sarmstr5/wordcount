@@ -1,0 +1,28 @@
+7 files
+real	0m28.849s
+user	0m7.534s
+sys	0m0.475s
+
+real	0m28.244s
+user	0m7.565s
+sys	0m0.491s
+
+1 fiel
+real	0m5.139s
+user	0m5.841s
+sys	0m0.409s
+
+17 files
+real	0m28.894s
+user	0m7.301s
+sys	0m0.464s
+
+100 files
+real	0m31.114s
+user	0m7.498s
+sys	0m0.467s
+
+233 files
+real	0m34.497s
+user	0m7.894s
+sys	0m0.500s
