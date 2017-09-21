@@ -13,9 +13,10 @@ for f in files:
 target_files = sorted(target_files)
 print(target_files)
 
-with open('1985andlater.txt', 'w') as output:
+with open('1985andlater2.txt', 'w') as output:
     for f in target_files:
         with open(dir+f) as newfile:
+            print(f)
             for line in newfile:
                 output.write(line)
         output.write('\n')
