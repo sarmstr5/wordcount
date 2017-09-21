@@ -2,7 +2,6 @@
 
 import os
 import sys
-import re
 from collections import defaultdict
 
 # initializes value as zero when new key is added
