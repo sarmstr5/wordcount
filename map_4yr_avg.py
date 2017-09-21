@@ -15,12 +15,10 @@ word_dict = defaultdict(int)
 # the term window is one year longer to store the camparison year
 term_window = 3
 term_year = 0
-partition = 0
+partition = 1985
 year = 1985
 
 for doc in sys.stdin:
-    print(doc)
-
     try:
         # files are YYYYMMDD.txt
         input_file = os.environ['mapreduce_map_input_file']
@@ -40,10 +38,11 @@ for doc in sys.stdin:
         print('{}\t{}\t{}\t{}'.format(partition, date, word, word_dict[word]))
 
     if(term_year == term_window):
-        partition += 1
+        partition += 4
         term_year = 0
     else:
         term_year += 1
+
     year += 1
 
 
